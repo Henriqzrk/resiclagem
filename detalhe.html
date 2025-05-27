@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Detalhes</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: #121212;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      margin: 0;
+    }
+
+    header, footer {
+      background: #1b1a1a;
+      padding: 20px;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo img {
+      height: 50px;
+    }
+
+    .site-title h1 {
+      font-size: 24px;
+      color: #81c784;
+      margin: 0;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #fff;
+      padding: 6px 10px;
+      border-bottom: 2px solid #fff;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #4caf50;
+      border-color: #4caf50;
+    }
+
+    .detail-container {
+      max-width: 900px;
+      margin: 60px auto;
+      padding: 0 20px;
+      text-align: center;
+    }
+
+    .detail-container h2 {
+      color: #81c784;
+      font-size: 30px;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+
+    .detail-container img {
+      width: 100%;
+      max-width: 600px;
+      border-radius: 10px;
+      margin: 20px 0;
+      box-shadow: 0 0 15px rgba(76, 175, 80, 0.6);
+    }
+
+    .detail-container p, .detail-container ul, .detail-container ol, .detail-container h3 {
+      text-align: left;
+      color: #ccc;
+      max-width: 700px;
+      margin: 20px auto;
+      line-height: 1.6;
+    }
+
+    .detail-container ul, .detail-container ol {
+      padding-left: 20px;
+    }
+
+    .pratica {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #212121;
+      padding: 20px;
+      margin: 10px 0;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(76, 175, 80, 0.3);
+    }
+
+    .pratica i {
+      font-size: 30px;
+      color: #4caf50;
+      margin-right: 20px;
+    }
+
+    .pratica h3 {
+      font-size: 20px;
+      margin: 0;
+      color: #81c784;
+    }
+
+    .pratica p {
+      color: #ccc;
+      font-size: 16px;
+    }
+
+    footer {
+      text-align: center;
+      background-color: #1b1a1a;
+      padding: 7px;
+      margin-top: 80px;
+    }
+
+    footer .social-icons {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    footer .social-icons a {
+      text-decoration: none;
+      color: white;
+      font-size: 24px;
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    footer .social-icons a:hover {
+      color: #4caf50;
+      transform: scale(1.2);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <img src="recicle_capa-1.jpg" alt="Logo Reciclagem">
+      <div class="site-title">
+        <h1>Reciclar é Importante</h1>
+      </div>
+    </div>
+    <nav>
+      <ul>
+       
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="servicos.html">Serviços</a></li>
+        <li><a href="contato.html">Contato</a></li>
+        <li><a href="busca.html">Buscar</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="detail-container" id="detail">
+    <h2>Carregando...</h2>
+  </div>
+
+  <footer>
+    <div class="social-icons">
+      <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://wa.me/1234567890" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      <a href="tel:+1234567890"><i class="fas fa-phone-alt"></i></a>
+    </div>
+  </footer>
+
+  <script>
+    const bancoDeDados = [
+   {
+  id: 1,
+  titulo: "Reciclagem de Plástico",
+  descricao: `
+    <p>Reciclar plástico é fundamental para reduzir a quantidade de lixo que vai para os aterros e oceanos. A seguir, confira algumas dicas para tornar sua reciclagem de plástico mais eficiente:</p>
+
+    <div class="pratica">
+      <i class="fas fa-recycle"></i>
+      <div>
+        <h3>1. Separe o plástico corretamente</h3>
+        <p>Antes de descartar o plástico, separe os diferentes tipos de plástico. As embalagens de alimentos, garrafas e potes devem ser separados de plásticos não recicláveis. Isso ajuda a otimizar o processo de reciclagem.</p>
+      </div>
+    </div>
+
+    <div class="pratica">
+      <i class="fas fa-shield-alt"></i>
+      <div>
+        <h3>2. Lave as embalagens</h3>
+        <p>Plásticos que estão contaminados com resíduos de alimentos, como garrafas ou potes de iogurte, não são recicláveis. Lave bem as embalagens antes de descartá-las. Um simples enxágue ajuda muito!</p>
+      </div>
+    </div>
+
+    <div class="pratica">
+      <i class="fas fa-plug"></i>
+      <div>
+        <h3>3. Descarte plásticos de forma responsável</h3>
+        <p>Verifique a coleta seletiva em sua região. Se sua cidade tem coleta, certifique-se de descartar os plásticos nos contêineres corretos. Caso contrário, procure por pontos de coleta específicos para plásticos recicláveis.</p>
+      </div>
+    </div>
+
+    <div class="pratica">
+      <i class="fas fa-globe-americas"></i>
+      <div>
+        <h3>4. Reduza o uso de plásticos descartáveis</h3>
+        <p>Evite ao máximo o uso de plásticos descartáveis, como copos e talheres. Prefira opções reutilizáveis, como garrafas de água e canudos metálicos. Cada pequeno gesto contribui para a redução do desperdício.</p>
+      </div>
+    </div>
+
+    <div class="pratica">
+      <i class="fas fa-cogs"></i>
+      <div>
+        <h3>5. Apoie produtos reciclados</h3>
+        <p>Quando possível, opte por produtos feitos a partir de plásticos reciclados. Além de ajudar a dar um novo ciclo de vida ao plástico, você estará incentivando empresas a adotarem práticas sustentáveis.</p>
+      </div>
+    </div>
+
+    <p>Seguindo essas dicas, você pode fazer a diferença e ajudar a preservar o meio ambiente. A reciclagem de plástico não é apenas importante, mas essencial para um futuro mais sustentável para todos!</p>
+  `,
+  imagem: "img/plastico.jpg"
+},
+  {
+  id: 2,
+  titulo: "Reciclagem de Papel",
+  descricao: `
+    <p>Reciclar papel é uma das formas mais simples e eficazes de ajudar a reduzir o impacto ambiental. Aqui estão algumas dicas para melhorar a reciclagem de papel e contribuir para um futuro mais sustentável:</p>
+    
+    <div class="pratica">
+      <i class="fas fa-recycle"></i>
+      <div>
+        <h3>1. Separe o papel corretamente</h3>
+        <p>Antes de descartar o papel, certifique-se de que ele não está contaminado com resíduos, como alimentos ou gordura. Papéis sujos geralmente não podem ser reciclados. Separe o papel limpo e evite a mistura com outros tipos de lixo.</p>
+      </div>
+    </div>
+
+    <div class="pratica">
+      <i class="fas fa-trash-alt"></i>
+      <div>
+        <h3>2. Evite papéis plastificados</h3>
+        <p>Papéis plastificados, como embalagens de leite ou suco, não são recicláveis. Esses papéis possuem uma camada de plástico que dificulta o processo de reciclagem. Prefira alternativas como embalagens de papelão sem revestimento plástico.</p>
+      </div>
+    </div>
+
+    <div class="pratica">
+      <i class="fas fa-book"></i>
+      <div>
+        <h3>3. Reaproveite papéis usados</h3>
+        <p>Antes de descartar papéis, pense em maneiras de reutilizá-los. Você pode usar papéis velhos para rascunhos, criar projetos de artesanato ou até mesmo fazer embalagens reutilizáveis. Dar uma nova vida ao papel é uma ótima maneira de reduzir o desperdício.</p>
+      </div>
+    </div>
+
+    <div class="pratica">
+      <i class="fas fa-globe-americas"></i>
+      <div>
+        <h3>4. Reduza o uso de papel</h3>
+        <p>Uma forma excelente de ajudar o meio ambiente é reduzir o consumo de papel. Prefira ler livros e documentos em formato digital sempre que possível e evite impressões desnecessárias. O papel utilizado de forma consciente diminui o impacto no meio ambiente.</p>
+      </div>
+    </div>
+
+    <div class="pratica">
+      <i class="fas fa-cogs"></i>
+      <div>
+        <h3>5. Compre produtos feitos de papel reciclado</h3>
+        <p>Optar por produtos feitos de papel reciclado é uma maneira simples de apoiar a economia circular e incentivar a indústria a investir em práticas mais sustentáveis. Além disso, ao comprar reciclado, você contribui para a redução da demanda por novos recursos naturais.</p>
+      </div>
+    </div>
+
+    <p>Seguindo essas dicas simples, você pode contribuir significativamente para a preservação dos recursos naturais e a redução do lixo. A reciclagem de papel é uma ação simples, mas com grande impacto para um futuro mais sustentável!</p>
+  `,
+  imagem: "img/papel.jpg"
+},
+   {
+  id: 3,
+  titulo: "Lixo Eletrônico",
+  descricao: `
+    <p>O lixo eletrônico é um dos maiores desafios ambientais da atualidade. Dispositivos como celulares, computadores, televisores e baterias contêm substâncias tóxicas que podem causar sérios danos ao meio ambiente e à saúde humana. Saiba como lidar com o lixo eletrônico de forma consciente:</p>
+    
+    <div class="pratica">
+      <i class="fas fa-recycle"></i>
+      <div>
+        <h3>1. Recicle seus dispositivos eletrônicos</h3>
+        <p>Evite jogar seus eletrônicos fora. Procure centros de reciclagem especializados em lixo eletrônico. Eles são equipados para desmontar os aparelhos e separar os materiais recicláveis, como metais, plásticos e vidro, de forma segura.</p>
+      </div>
+    </div>
+
+    <div class="pratica">
+      <i class="fas fa-mobile-alt"></i>
+      <div>
+        <h3>2. Doe ou repare</h3>
+        <p>Se o seu dispositivo ainda está funcionando, considere doá-lo para alguém que precise ou vendê-lo. Caso o aparelho esteja com algum defeito, procure consertá-lo ao invés de descartar. Muitas vezes, uma simples reparação pode prolongar a vida útil do aparelho.</p>
+      </div>
+    </div>
+
+    <div class="pratica">
+      <i class="fas fa-plug"></i>
+      <div>
+        <h3>3. Compre produtos duráveis e de qualidade</h3>
+        <p>Evite a obsolescência programada (quando os produtos são fabricados para durar pouco) optando por eletrônicos de boa qualidade e durabilidade. Isso reduzirá a quantidade de lixo eletrônico que você gera ao longo do tempo.</p>
+      </div>
+    </div>
+
+    <div class="pratica">
+      <i class="fas fa-battery-quarter"></i>
+      <div>
+        <h3>4. Descarte de baterias de forma correta</h3>
+        <p>Baterias de dispositivos eletrônicos não devem ser descartadas no lixo comum, pois contêm metais pesados como mercúrio, chumbo e cádmio. Procure pontos de coleta específicos para baterias usadas em sua cidade.</p>
+      </div>
+    </div>
+
+    <div class="pratica">
+      <i class="fas fa-recycle"></i>
+      <div>
+        <h3>5. Recicle os acessórios também</h3>
+        <p>Não se esqueça de reciclar acessórios como cabos, carregadores, baterias e fones de ouvido. Muitas vezes esses itens são esquecidos, mas também podem ser reciclados e reaproveitados em novos produtos.</p>
+      </div>
+    </div>
+
+    <p>O lixo eletrônico é uma grande preocupação ambiental, mas com atitudes conscientes podemos reduzir o impacto desse tipo de resíduo. Ao tomar as ações corretas, você ajuda a preservar o meio ambiente e promove um futuro mais sustentável para todos!</p>
+  `,
+  imagem: "img/eletronico.jpg"
+},
+     
+   {
+  id: 4,
+  titulo: "Compostagem Doméstica",
+  descricao: `
+    <p>A compostagem doméstica é uma prática simples e eficaz para transformar resíduos orgânicos em adubo natural, reduzindo a quantidade de lixo e promovendo a sustentabilidade. Aqui estão algumas dicas para começar sua compostagem em casa:</p>
+    
+    <div class="pratica">
+      <i class="fas fa-leaf"></i>
+      <div>
+        <h3>1. Escolha um local adequado</h3>
+        <p>Escolha um lugar no seu jardim ou área externa que receba boa ventilação e não seja exposto diretamente ao sol intenso. Se você morar em apartamento, pode usar composteiras de balcão ou até mesmo recipientes fechados, como baldes de compostagem.</p>
+      </div>
+    </div>
+
+    <div class="pratica">
+      <i class="fas fa-utensils"></i>
+      <div>
+        <h3>2. Separe os resíduos orgânicos</h3>
+        <p>Para compostar, é importante separar os resíduos orgânicos adequados, como restos de frutas, legumes, cascas de ovos, borra de café e folhas secas. Evite adicionar carne, laticínios, alimentos cozidos ou gordurosos, pois eles podem atrair pragas.</p>
+      </div>
+    </div>
+
+    <div class="pratica">
+      <i class="fas fa-hand-holding-heart"></i>
+      <div>
+        <h3>3. Misture materiais secos e úmidos</h3>
+        <p>Para obter uma compostagem eficiente, é fundamental equilibrar materiais secos (como folhas secas, palha e papel) e úmidos (restos de comida, borra de café). A combinação certa ajuda a acelerar o processo de decomposição e evitar odores desagradáveis.</p>
+      </div>
+    </div>
+
+    <div class="pratica">
+      <i class="fas fa-spinner"></i>
+      <div>
+        <h3>4. Mexa e aerifique a mistura</h3>
+        <p>Para garantir que o processo de decomposição ocorra de maneira eficiente, é importante mexer a compostagem regularmente. Isso ajuda a aerificar a mistura, permitindo que os micro-organismos responsáveis pela decomposição trabalhem de forma mais eficaz.</p>
+      </div>
+    </div>
+
+    <div class="pratica">
+      <i class="fas fa-smile"></i>
+      <div>
+        <h3>5. Pacote de compostagem pronto</h3>
+        <p>Após alguns meses, você terá um adubo rico e natural que pode ser usado para nutrir suas plantas e jardim. O composto estará pronto quando tiver uma textura escura e um cheiro de terra fresca.</p>
+      </div>
+    </div>
+
+    <p>A compostagem doméstica é uma excelente maneira de reduzir a quantidade de lixo que você gera e ao mesmo tempo enriquecer o solo com um adubo ecológico. Além disso, essa prática contribui para a preservação do meio ambiente e promove um estilo de vida mais sustentável.</p>
+  `,
+  imagem: "img/compostagem.jpeg"
+},
+
+      {
+        id: 5,
+        titulo: "Redução de Resíduos",
+        descricao: `
+          <p>Reduzir o lixo que geramos é um passo fundamental para um planeta mais saudável. Aqui estão algumas práticas sustentáveis para ajudar você a reduzir seus resíduos:</p>
+          <div class="pratica">
+            <i class="fas fa-shopping-bag"></i>
+            <div>
+              <h3>1. Compre de Forma Consciente</h3>
+              <p>Evite produtos com excessiva embalagem plástica. Prefira itens em embalagens recicláveis ou reutilizáveis.</p>
+            </div>
+          </div>
+          <div class="pratica">
+            <i class="fas fa-recycle"></i>
+            <div>
+              <h3>2. Reutilize Sempre que Possível</h3>
+              <p>Reaproveite embalagens, potes e outros itens do dia a dia. Peças de roupas e móveis antigos podem ganhar uma nova vida!</p>
+            </div>
+          </div>
+          <div class="pratica">
+            <i class="fas fa-leaf"></i>
+            <div>
+              <h3>3. Invista em Produtos Naturais</h3>
+              <p>Escolha produtos de limpeza ecológicos e biodegradáveis. Eles não só são melhores para o meio ambiente, mas também para sua saúde.</p>
+            </div>
+          </div>
+          <div class="pratica">
+            <i class="fas fa-bicycle"></i>
+            <div>
+              <h3>4. Use Transporte Sustentável</h3>
+              <p>Prefira andar de bicicleta, usar transporte público ou caminhar sempre que possível. Isso reduz a emissão de gases poluentes e a quantidade de resíduos gerados.</p>
+            </div>
+          </div>
+          <div class="pratica">
+            <i class="fas fa-tree"></i>
+            <div>
+              <h3>5. Plante Árvores e Tenha uma Horta</h3>
+              <p>Plante árvores e inicie sua própria horta. Ao invés de jogar fora resíduos orgânicos, você pode transformá-los em fertilizantes naturais!</p>
+            </div>
+          </div>
+          <p>Ao seguir essas dicas, você não só ajuda a reduzir os resíduos, mas também contribui para um futuro mais verde e sustentável.</p>
+        `,
+        imagem: "img/reducao.jpg"
+      }
+    ];
+
+    function getQueryParam(param) {
+      const urlParams = new URLSearchParams(window.location.search);
+      return urlParams.get(param);
+    }
+
+    function carregarDetalhe() {
+      const id = parseInt(getQueryParam('id'));
+      const conteudo = bancoDeDados.find(item => item.id === id);
+
+      const container = document.getElementById('detail');
+
+      if (!conteudo) {
+        container.innerHTML = "<h2>Conteúdo não encontrado</h2><p>Verifique o link ou tente novamente.</p>";
+        return;
+      }
+
+      container.innerHTML = `
+        <h2>${conteudo.titulo}</h2>
+        <img src="${conteudo.imagem}" alt="${conteudo.titulo}">
+        <div>${conteudo.descricao}</div>
+      `;
+    }
+
+    carregarDetalhe();
+  </script>
+
+</body>
+</html>

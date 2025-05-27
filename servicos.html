@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nossos Serviços</title>
+
+  <!-- Link para os ícones do Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    body {
+      background: #000;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      margin: 0;
+    }
+
+    header, footer {
+      background: #1b1a1a;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 0;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #fff;
+      border-bottom: 2px solid #fff;
+      padding: 5px 10px;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #4caf50;
+      border-color: #4caf50;
+    }
+
+    .content {
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .content h2 {
+      color: #81c784;
+      margin-bottom: 20px;
+      font-size: 2rem;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    .content p {
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    .service-item {
+      margin-bottom: 20px;
+      padding: 10px;
+      background-color: #333;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transition: box-shadow 0.3s ease;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    .service-item:hover {
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    }
+
+    .service-item h3 {
+      color: #4caf50;
+      font-size: 1.5rem;
+    }
+
+    .service-item img {
+      width: 100%;
+      max-width: 250px;
+      height: auto;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+
+    .service-item p {
+      font-size: 1rem;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background-color: #4caf50;
+      color: #fff;
+      padding: 6px 12px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: background-color 0.3s ease;
+      margin-top: 10px;
+    }
+
+    .cta-button:hover {
+      background-color: #81c784;
+    }
+
+    .social-icons {
+      margin-top: 15px;
+    }
+
+    .social-icons a {
+      color: #fff;
+      margin: 0 15px;
+      font-size: 24px;
+      transition: color 0.3s;
+    }
+
+    .social-icons a:hover {
+      color: #4caf50;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Nossos Serviços</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="contato.html">Contato</a></li>
+        <li><a href="busca.html">Buscar</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="content">
+    <h2>O que oferecemos</h2>
+
+    <div class="service-item">
+      <img src="conceitos-basicos-da-coleta-seletiva.png" alt="Coleta Seletiva">
+      <h3>Coleta Seletiva</h3>
+      <p>Disponibilizamos pontos de coleta para facilitar a separação de materiais recicláveis.</p>
+      <a href="coleta.html" class="cta-button">Saiba Mais</a>
+    </div>
+
+    <div class="service-item">
+      <img src="educaçao.jpg" alt="Educação Ambiental">
+      <h3>Educação Ambiental</h3>
+      <p>Realizamos palestras e eventos sobre sustentabilidade e práticas ecológicas.</p>
+      <a href="educacao.html" class="cta-button">Saiba Mais</a>
+    </div>
+
+    <div class="service-item">
+      <img src="oplsticoemnossasvidas.webp" alt="Consultoria para Empresas">
+      <h3>Consultoria para Empresas</h3>
+      <p>Auxiliamos empresas a implementarem políticas de reciclagem e ESG.</p>
+      <a href="consultoria.html" class="cta-button">Saiba Mais</a>
+    </div>
+  </div>
+
+  <footer>
+    <div class="social-icons">
+      <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://wa.me/1234567890" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      <a href="tel:+1234567890"><i class="fas fa-phone-alt"></i></a>
+    </div>
+  </footer>
+
+</body>
+</html>

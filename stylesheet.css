@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nós - Reciclar Também é Importante</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000000;
+            color: #ffffff;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #1b1a1a;
+            padding: 20px;
+            flex-wrap: wrap;
+        }
+
+        header .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        header .logo h1 {
+            font-size: 36px;
+            color: #249129;
+            transition: color 0.3s ease;
+        }
+
+        header .logo h1:hover {
+            color: #4CAF50;
+        }
+
+        header .logo p {
+            font-size: 14px;
+            font-style: italic;
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        header nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            padding: 8px 15px;
+            border-radius: 7px;
+            border-bottom: 3px solid rgba(255, 255, 255, 0.89);
+            transition: color 0.3s ease, text-decoration 0.3s ease;
+        }
+
+        header nav ul li a:hover {
+            color: #4CAF50;
+            text-decoration: underline;
+            border-color: rgba(116, 116, 116, 0.89);
+        }
+
+        .about-us {
+            padding: 40px 20px;
+            background-color: #222222;
+            color: #81c784;
+            text-align: center;
+        }
+
+        .about-us h2 {
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+
+        .about-us p {
+            font-size: 18px;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        footer {
+            background-color: #464646;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer .footer-content p {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        footer .social-icons {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        footer .social-icons a {
+            text-decoration: none;
+            color: white;
+            font-size: 24px;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        footer .social-icons a:hover {
+            color: #4CAF
